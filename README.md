@@ -4,11 +4,21 @@
 
 ---
 
-# Overview
+# Introduction
 
 The purpose of this repo is to enable the easy and quick setup of a FLANK demo use-case. We are using Flink/Nifi/Kafka and Kudu as well as some other tools to showcase a streaming data use-case from edge to visualization.
 
 It is setup very flexible and can be reused for different scenarios. Below is using a fleet control example. The main goal is a 10-20 minute **demo** to customers. The sensors can be renamed to suit the scenario and the geolocation data can also be updated/edited to fit to the location of the customer.
+
+# Overview
+
+Below is the demo flow including Nifi to collect the data simulating sensors at the edge. These could be on vehicles or wearables etc. We are then combining different datasources and enrich the data to display realtime streaming data on a map.
+
+
+![](assets/20220623_093924_image.png)
+
+
+![](assets/20220623_093538_image.png)
 
 # Pre-requisites
 
@@ -106,6 +116,8 @@ TBLPROPERTIES ('kudu.num_tablet_replicas' = '1');
 ```
 
 3. Add your custom location data
+
+   [switzerland](assets/20220623_093403_switzerland.sql)
 4. Create target table *sensors_joined*
 
    Update the column names to suit your example! Below are car/truck sensors.
@@ -301,3 +313,52 @@ Start the job and make sure there are no errors.
 Check in Flink that the job is running.
 
 ![](assets/20220623_073826_image.png)
+
+# Step 4: Show the results on a map
+
+Go to Data Viz via the webinterface of the web instance and click on ‘data’ to add a new connection.
+
+1. Add new Data Connection
+
+Basic:
+
+Connection type: `Impala`
+
+Connection name: `ssb_1`
+
+Hostname or IP address: `YOUR HOST IP ADDRESS`
+
+
+Advanced:
+
+Connection mode: `Binary`
+
+Socket type: `Normal`
+
+Authentication mode: `NoSasl`
+
+
+![](assets/20220623_092457_image.png)
+
+
+![](assets/20220623_092553_image.png)
+
+
+You need to get a Google API Id. 
+
+![](assets/20220623_093001_image.png)
+
+Then add the key in DataViz under **Site Settings > Google API Id** and save the settings.
+
+![](assets/20220623_092650_image.png)
+
+You can now either create the map yourself or import a ready made dashboard:
+
+[Import Fleet Control Dashboard](assets/20220623_092822_visuals_fleet-control.json)
+
+![](assets/20220623_092707_image.png)
+
+
+Below is an example of what it can look like:
+
+![](assets/20220623_093125_image.png)
