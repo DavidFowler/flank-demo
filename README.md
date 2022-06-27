@@ -14,9 +14,7 @@ It is setup very flexible and can be reused for different scenarios. Below is us
 
 Below is the demo flow including Nifi to collect the data simulating sensors at the edge. These could be on vehicles or wearables etc. We are then combining different datasources and enrich the data to display realtime streaming data on a map.
 
-
 ![](assets/20220623_093924_image.png)
-
 
 ![](assets/20220623_093538_image.png)
 
@@ -40,9 +38,19 @@ In NiFi click on the top right burger menu and select *Templates*. Import the fo
 
 [20220622_083349_Streaming-Demo_NiFi_Flow.xml](assets/20220622_083349_Streaming-Demo_NiFi_Flow.xml)
 
+You will then need to update the IPs of your processors as well as the record reader and writer, to reflect your elastic IP/your cluster's IP.
+
 Your canvas should now look like below:
 
 ![](assets/20220622_083109_nifi.png)
+
+Go to the Schema Registry and follow lab 1 from [here](https://github.com/asdaraujo/edge2ai-workshop/blob/trunk/workshop_nifi.adoc#lab-1---registering-a-schema-in-schema-registry) to add the Schema to the Registry.
+
+You can find the schema text [here](https://raw.githubusercontent.com/cloudera-labs/edge2ai-workshop/master/sensor.avsc).
+
+The result will look as follows:
+
+![](assets/20220627_080213_image.png)
 
 ## Weather data
 
@@ -213,16 +221,13 @@ Topic Name:         `iot`
 
 Data Format:        `JSON`
 
-
 ![](assets/20220623_073120_image.png)
 
 ![]()
 
 Ensure the Schema tab is selected. Scroll to the bottom of the tab and click Detect Schema. SSB will take a sample of the data flowing through the topic and will infer the schema used to parse the content. Alternatively you could also specify the schema in this tab.
 
-
 ![](assets/20220623_073202_image.png)
-
 
 Click on the Event Time tab, define your time handling. You can specify Watermark Definitions when adding a Kafka table. Watermarks use an event time attribute and have a watermark strategy, and can be used for various time-based operations.
 The Event Time tab provides the following properties to configure the event time field and watermark for the Kafka stream:
@@ -232,16 +237,13 @@ The Event Time tab provides the following properties to configure the event time
 
 Watermark seconds : number of seconds used in the watermark strategy. The watermark is defined by the current event timestamp minus this value.
 
-
 Input Timestamp Column: `sensor_ts`
 
 Event Time Column:      `event_ts`
 
 Watermark Seconds:      `3`
 
-
 ![](assets/20220623_073253_image.png)
-
 
 If we need to manipulate the source data to fix, cleanse or convert some values, we can define transformations for the data source to perform those changes. These transformations are defined in Javascript.
 The serialized record read from Kafka is provided to the Javascript code in the record.value variable. The last command of the transformation must return the serialized content of the modified record.
@@ -258,11 +260,9 @@ payload['sensor_0'] = Math.round(payload.sensor_0 * 1000);
 JSON.stringify(payload);
 ```
 
-
 ![](assets/20220623_073345_image.png)
 
 Click on the Properties tab, enter the following value for the Consumer Group property and click Save changes.
-
 
 ![](assets/20220623_073425_image.png)
 
@@ -277,7 +277,6 @@ Name: `kudu_source`
 Catalog Type: `kudu`
 
 Kudu Masters: `edge2ai-0.dim.local:7051`
-
 
 ![](assets/20220623_073600_image.png)
 
@@ -332,7 +331,6 @@ Connection name: `ssb_1`
 
 Hostname or IP address: `YOUR HOST IP ADDRESS`
 
-
 Advanced:
 
 Connection mode: `Binary`
@@ -341,14 +339,11 @@ Socket type: `Normal`
 
 Authentication mode: `NoSasl`
 
-
 ![](assets/20220623_092457_image.png)
-
 
 ![](assets/20220623_092553_image.png)
 
-
-You need to get a Google API Id. 
+You need to get a Google API Id.
 
 ![](assets/20220623_093001_image.png)
 
@@ -360,9 +355,10 @@ You can now either create the map yourself or import a ready made dashboard:
 
 [Import Fleet Control Dashboard](assets/20220623_092822_visuals_fleet-control.json)
 
-![](assets/20220623_092707_image.png)
+Import the Dashboard by clicking on the ... under **Data** and then click on **Import Visual Artifacts**.
 
+![](assets/20220627_081450_image.png)
 
-Below is an example of what it can look like:
+Below is an example of what it will look like:
 
 ![](assets/20220623_093125_image.png)
