@@ -115,15 +115,14 @@ STORED AS KUDU
 TBLPROPERTIES ('kudu.num_tablet_replicas' = '1');
 ```
 
-3.
-4. Add your custom location data
+3. Add your custom location data
 
    [austria](assets/20220623_111410_austria.sql)
 
    [hungary](assets/20220623_111508_hungary.sql)
 
    [switzerland](assets/20220623_093403_switzerland.sql)
-5. Create target table *sensors_joined*
+4. Create target table *sensors_joined*
 
    Update the column names to suit your example! Below are car/truck sensors.
 
