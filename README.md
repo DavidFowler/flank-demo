@@ -1,4 +1,4 @@
-# Flank - Streaming Demo
+# FlaNKKS - Streaming Demo
 
 **Status:** *Work in progress*
 
@@ -6,9 +6,9 @@
 
 # Introduction
 
-The purpose of this repo is to enable the easy and quick setup of a FLANK demo use-case. We are using Flink/Nifi/Kafka and Kudu as well as some other tools to showcase a streaming data use-case from edge to visualization.
+The purpose of this repo is to enable the easy and quick setup of a FLaNKKS demo use-case. We are using Flink, Nifi, Kafka, Kudu, and SQL Stream Builder as well as some other tools to showcase a streaming data use-case from edge to visualization.
 
-It is setup very flexible and can be reused for different scenarios. Below is using a fleet control example. The main goal is a 10-20 minute **demo** to customers. The sensors can be renamed to suit the scenario and the geolocation data can also be updated/edited to fit to the location of the customer.
+The setup is very flexible and can be reused for different scenarios. Below is using a fleet control example. The main goal is a 10-20 minute **demo** to customers. The sensors can be renamed to suit the scenario and the geolocation data can also be updated/edited to fit to the location of the customer.
 
 # Overview
 
@@ -20,13 +20,17 @@ Below is the demo flow including Nifi to collect the data simulating sensors at 
 
 # Pre-requisites
 
-Follow the instructions [here](https://github.com/cloudera-labs/edge2ai-workshop) to setup an 'edge2ai' one node cluster. Alternatively you can follow my tutorial [here](https://www.reginahack.com/tutorial-cdp-private-cloud-base-dev-cluster/) to do the setup manually. I've been using AWS and recommend the EC2 instance type to be *r5a.4xlarge*.
+Obatin a Cloudera download site user and password which comes with a license purchase or for partners a partenr development license from Cloudera's partner portal. The partner development license is strickly for partners to develop and show integration of their products and solutions with Cloudera products.
 
-If you followed the edge2ai guide, you will also have a web instance that provides links to the different applications. For the purpose of this doc, we will use this as the basis. The next steps are:
+Follow the instructions [here](https://github.com/cloudera-labs/edge2ai-workshop/tree/trunk/setup) to setup an 'edge2ai' one node CDP cluster. There are two installs described on that page; a fully automated install on AWS infrastructure or on an existing supported already installed Linux VM.  Alternatively you can manaully install your own environment with an example tutorial [here](https://www.reginahack.com/tutorial-cdp-private-cloud-base-dev-cluster/). If creating your own existing supported Linux VM you probably want the VM shape to be something like an the AWS *r5a.4xlarge*.
+
+For the purpose of this doc, we will use the edge2ai workshop as the install basis.  If you followed the automated AWS edge2ai install path that creates the Liniux VM and installs CDP, you will also have a web instance and page that provides links to the different applications. The main edge2ai workshop github page also provides a generic list and some optional self training labs.   The next steps are:
 
 * Get IP from the ‘web’ instance and go to the web portal
 * Login with the username/password as defined per setup
 * Download ssh key from web portal and update permission
+* or
+* Note your VM IP and use the list of componets on main workshop page substituting your IP
 
 # Step 1: Start the data stream
 
