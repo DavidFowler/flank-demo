@@ -20,7 +20,7 @@ Below is the demo flow including Nifi to collect the data simulating sensors at 
 
 # Pre-requisites
 
-Follow the instructions [here](https://github.com/asdaraujo/edge2ai-workshop) to setup an 'edge2ai' one node cluster. Alternatively you can follow my tutorial [here](https://www.reginahack.com/tutorial-cdp-private-cloud-base-dev-cluster/) to do the setup manually. I've been using AWS and recommend the EC2 instance type to be *r5a.4xlarge*.
+Follow the instructions [here](https://github.com/cloudera-labs/edge2ai-workshop) to setup an 'edge2ai' one node cluster. Alternatively you can follow my tutorial [here](https://www.reginahack.com/tutorial-cdp-private-cloud-base-dev-cluster/) to do the setup manually. I've been using AWS and recommend the EC2 instance type to be *r5a.4xlarge*.
 
 If you followed the edge2ai guide, you will also have a web instance that provides links to the different applications. For the purpose of this doc, we will use this as the basis. The next steps are:
 
