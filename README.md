@@ -20,7 +20,7 @@ Below is the demo flow including Nifi to collect the data simulating sensors at 
 
 # Pre-requisites
 
-Obatin a Cloudera download site user and password which comes with a license purchase or for partners a partenr development license from Cloudera's partner portal. The partner development license is strickly for partners to develop and show integration of their products and solutions with Cloudera products.
+Obatin a Cloudera download site user and password which comes with a license purchase or for partners a partner development license from Cloudera's partner portal. The partner development license is strickly for partners to develop and show integration of their products and solutions with Cloudera products.
 
 Follow the instructions [here](https://github.com/cloudera-labs/edge2ai-workshop/tree/trunk/setup) to setup an 'edge2ai' one node CDP cluster. There are two installs described on that page; a fully automated install on AWS infrastructure or on an existing supported already installed Linux VM.  If creating your own existing supported Linux VM you probably want the VM shape to be something like an the AWS *r5a.4xlarge*.  
 
@@ -33,7 +33,7 @@ The next steps are:
 * Login with the username/password as defined per setup
 * Download ssh key from web portal and update permission
 * or
-* Note your VM IP and use the list of componets on main workshop page substituting your IP and the ssh access to the VM you setup
+* Note your VM IP and use the list of components on main workshop page substituting your IP and the ssh access to the VM you setup
 
 # Step 1: Start the data stream
 
