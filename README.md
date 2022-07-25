@@ -22,15 +22,18 @@ Below is the demo flow including Nifi to collect the data simulating sensors at 
 
 Obatin a Cloudera download site user and password which comes with a license purchase or for partners a partenr development license from Cloudera's partner portal. The partner development license is strickly for partners to develop and show integration of their products and solutions with Cloudera products.
 
-Follow the instructions [here](https://github.com/cloudera-labs/edge2ai-workshop/tree/trunk/setup) to setup an 'edge2ai' one node CDP cluster. There are two installs described on that page; a fully automated install on AWS infrastructure or on an existing supported already installed Linux VM.  Alternatively you can manaully install your own environment with an example tutorial [here](https://www.reginahack.com/tutorial-cdp-private-cloud-base-dev-cluster/). If creating your own existing supported Linux VM you probably want the VM shape to be something like an the AWS *r5a.4xlarge*.
+Follow the instructions [here](https://github.com/cloudera-labs/edge2ai-workshop/tree/trunk/setup) to setup an 'edge2ai' one node CDP cluster. There are two installs described on that page; a fully automated install on AWS infrastructure or on an existing supported already installed Linux VM.  If creating your own existing supported Linux VM you probably want the VM shape to be something like an the AWS *r5a.4xlarge*.  
 
-For the purpose of this doc, we will use the edge2ai workshop as the install basis.  If you followed the automated AWS edge2ai install path that creates the Liniux VM and installs CDP, you will also have a web instance and page that provides links to the different applications. The main edge2ai workshop github page also provides a generic list and some optional self training labs.   The next steps are:
+Alternatively you can manaully install your own environment with an example tutorial [here](https://www.reginahack.com/tutorial-cdp-private-cloud-base-dev-cluster/). 
 
+For the purpose of this doc, we will use the edge2ai workshop as the install basis.  If you followed the automated AWS edge2ai install path, that creates the Linux VM and installs CDP.  You will also have a web instance and page that provides links to the different applications. The main edge2ai workshop github page also provides a generic list of the links and some optional self training labs.   
+
+The next steps are:
 * Get IP from the ‘web’ instance and go to the web portal
 * Login with the username/password as defined per setup
 * Download ssh key from web portal and update permission
 * or
-* Note your VM IP and use the list of componets on main workshop page substituting your IP
+* Note your VM IP and use the list of componets on main workshop page substituting your IP and the ssh access to the VM you setup
 
 # Step 1: Start the data stream
 
