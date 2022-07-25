@@ -22,7 +22,7 @@ Below is the demo flow including Nifi to collect the data simulating sensors at 
 
 Obatin a Cloudera download site user and password which comes with a license purchase or for partners a partner development license from Cloudera's partner portal. The partner development license is strickly for partners to develop and show integration of their products and solutions with Cloudera products.
 
-Follow the instructions [here](https://github.com/cloudera-labs/edge2ai-workshop/tree/trunk/setup) to setup an 'edge2ai' one node CDP cluster. There are two installs described on that page; a fully automated install on AWS infrastructure or on an existing supported already installed Linux VM.  If creating your own existing supported Linux VM you probably want the VM shape to be something like an the AWS *r5a.4xlarge*.  
+Follow the instructions [here](https://github.com/cloudera-labs/edge2ai-workshop/tree/trunk/setup) to setup an 'edge2ai' one node CDP cluster. There are two installs described on that page; a fully automated install on AWS infrastructure or setup on an existing supported [Linux VM](https://github.com/cloudera-labs/edge2ai-workshop/tree/trunk/setup#deploying-on-an-existing-vm).  If creating your own existing supported Linux VM you probably want the VM shape to be something like an the AWS *r5a.4xlarge*.  
 
 Alternatively you can manaully install your own environment with an example tutorial [here](https://www.reginahack.com/tutorial-cdp-private-cloud-base-dev-cluster/). 
 
@@ -369,3 +369,9 @@ Import the Dashboard by clicking on the ... under **Data** and then click on **I
 Below is an example of what it will look like:
 
 ![](assets/20220623_093125_image.png)
+
+Resources
+Original blog by Regina Hackenburg
+
+
+Cloudera Documentation
