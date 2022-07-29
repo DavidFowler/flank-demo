@@ -25,7 +25,7 @@ Obtain a Cloudera download site user and password which comes with a license pur
 Follow the instructions [here](https://github.com/cloudera-labs/edge2ai-workshop/tree/trunk/setup) to setup an 'edge2ai' one node CDP cluster. There are two installs people external to Cloudera can use described on that page; 
 a fully automated install on AWS infrastructure [here](https://github.com/cloudera-labs/edge2ai-workshop/tree/trunk/setup#running-locally-without-docker) for prereqs and [here](https://github.com/cloudera-labs/edge2ai-workshop/tree/trunk/setup#setup) for install steps.
 or 
-[install on an existing supported Linux VM](https://github.com/cloudera-labs/edge2ai-workshop/tree/trunk/setup#deploying-on-an-existing-vm).  If creating your own existing supported Linux VM you probably want the VM shape to be something like an the AWS *r5a.4xlarge*.  
+[install on an existing supported Linux VM](https://github.com/cloudera-labs/edge2ai-workshop/tree/trunk/setup#deploying-on-an-existing-vm).  If creating your own existing supported Linux VM you probably want the VM shape to be something like the AWS *r5a.4xlarge* (suggest 200GB+ root disk, 200GB+ additional disk volume not mounted, 128GB+ mem).  
 
 Alternatively you can manaully install your own environment with an example tutorial [here](https://www.reginahack.com/tutorial-cdp-private-cloud-base-dev-cluster/). 
 
