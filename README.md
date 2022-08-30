@@ -31,14 +31,18 @@ or
 
 Alternatively you can manaully install your own environment with an example tutorial [here](https://www.reginahack.com/tutorial-cdp-private-cloud-base-dev-cluster/). 
 
-For the purpose of this doc, we will use the edge2ai workshop as the install basis.  If you followed the automated AWS edge2ai install path, that creates the Linux VM and installs CDP.  You will also have a web instance and page that provides links to the different applications. The main edge2ai workshop github page also provides a generic list of the links and some optional self training labs.   
+For the purpose of this doc, we will use the edge2ai workshop as the install basis.  If you followed the automated AWS edge2ai install path, that creates the CentOS 7 VM and installs CDP. If you followed the path to install on an existing CentOS 7 VM that will install CDP on the existing VM.
 
-The next steps are:
+The main edge2ai workshop github page provides a generic list of the CDP application links and some optional self training labs.   
+
+The next steps for the automated AWS install are:
 * Get IP from the ‘web’ instance and go to the web portal
 * Login with the username/password as defined per setup
 * Download ssh key from web portal and update permission
 * or
 * Note your VM IP and use the list of components on main workshop page substituting your IP and the ssh access to the VM you setup
+
+The following steps can then be used for either of the install paths you followed.
 
 # Step 1: Start the data stream
 
