@@ -60,7 +60,7 @@ Your canvas should now look like below:
 
 ![](assets/20220622_083109_nifi.png)
 
-Go to the Schema Registry and follow lab 1 from [here](https://github.com/asdaraujo/edge2ai-workshop/blob/trunk/workshop_nifi.adoc#lab-1---registering-a-schema-in-schema-registry) to add the Schema to the Registry.
+Go to the Schema Registry and follow lab 1 from [here](https://github.com/cloudera-labs/edge2ai-workshop/blob/trunk/workshop_nifi.adoc#lab-1---registering-a-schema-in-schema-registry) to add the Schema to the Registry.
 
 You can find the schema text [here](https://raw.githubusercontent.com/cloudera-labs/edge2ai-workshop/master/sensor.avsc).
 
