@@ -50,7 +50,7 @@ The following steps can then be used for either of the install paths you followe
 
 *You can use NiFi to create the sensor stream or connect via ssh and start a generator script via console (see below).*
 
-In NiFi click on the top right burger menu and select *Templates*. Import the following Nifi flow:
+In NiFi, from the Operate Palette click on the Upload Template icon. Import the following Nifi flow:
 
 [20220622_083349_Streaming-Demo_NiFi_Flow.xml](assets/20220622_083349_Streaming-Demo_NiFi_Flow.xml)
 
