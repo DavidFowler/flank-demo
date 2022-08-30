@@ -29,7 +29,7 @@ a fully automated install on AWS infrastructure [here](https://github.com/cloude
 or 
 [install on an existing supported Linux VM](https://github.com/cloudera-labs/edge2ai-workshop/tree/trunk/setup#deploying-on-an-existing-vm).  If creating your own existing supported Linux VM you probably want the VM shape to be something like the AWS *r5a.4xlarge* (suggest 200GB+ root disk, 200GB+ additional disk volume not mounted, 128GB+ mem).  
 
-Alternatively you can manaully install your own environment with an example tutorial [here](https://www.reginahack.com/tutorial-cdp-private-cloud-base-dev-cluster/). 
+Alternatively you can manaully install your own environment.  There is an example tutorial [here](https://www.cloudera.com/tutorials/how-to-create-a-cdp-private-cloud-base-development-cluster.html) that starts with a CDP Base installation. The install docs on the options describe their installs.
 
 For the purpose of this doc, we will use the edge2ai workshop as the install basis.  If you followed the automated AWS edge2ai install path, that creates the CentOS 7 VM and installs CDP. If you followed the path to install on an existing CentOS 7 VM that will install CDP on the existing VM.
 
