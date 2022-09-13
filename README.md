@@ -31,7 +31,7 @@ or
 
 Alternatively you can manaully install your own environment.  There is an example tutorial [here](https://www.cloudera.com/tutorials/how-to-create-a-cdp-private-cloud-base-development-cluster.html) that starts with a CDP Base installation. The install docs on the options describe their installs.
 
-For the purpose of this doc, we will use the edge2ai workshop as the install basis.  If you followed the automated AWS edge2ai install path, that creates the CentOS 7 VM and installs CDP. If you followed the path to install on an existing CentOS 7 VM that will install CDP on the existing VM.
+For the purpose of this doc, we will use the edge2ai workshop as the install basis.  If you followed the automated AWS edge2ai install path, that creates the CentOS 7 VM and installs CDP.  If you followed the path to install on an existing CentOS 7 VM that will install CDP on that existing VM.
 
 The main edge2ai workshop github page provides a generic list of the CDP application links and some optional self training labs.   
 
@@ -39,8 +39,9 @@ The next steps for the automated AWS install are:
 * Get IP from the ‘web’ instance and go to the web portal
 * Login with the username/password as defined per setup
 * Download ssh key from web portal and update permission
-* or
-* Note your VM IP and use the list of components on main workshop page substituting your IP and the ssh access to the VM you setup
+
+If you installed on your own VM:
+* Note your VM IP and use the list of components on main workshop page [here](https://github.com/cloudera-labs/edge2ai-workshop/) substituting your IP and the ssh access to the VM you setup
 
 The following steps can then be used for either of the install paths you followed.
 
