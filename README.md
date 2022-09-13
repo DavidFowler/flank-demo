@@ -55,6 +55,8 @@ In NiFi, from the Operate Palette click on the Upload Template icon. Import the 
 
 [20220622_083349_Streaming-Demo_NiFi_Flow.xml](assets/20220622_083349_Streaming-Demo_NiFi_Flow.xml)
 
+Then drag the Template icon to your flow designer and you will be promted to add select the template to add.
+
 You will then need to update the IPs of your processors as well as the record reader and writer, to reflect your elastic IP/your cluster's IP.
 
 Your canvas should now look like below:
