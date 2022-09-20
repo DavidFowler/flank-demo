@@ -47,17 +47,17 @@ The following steps can then be used for either of the install paths you followe
 
 # Step 1: Start the data stream
 
-You have two choices below to create a sensor data stream; NiFi or command line.  The command line is probably easier but eh NiFi approach is more fun and demonstrates the stream data coming through a flow.
+You have two choices below to create a sensor data stream; NiFi or command line.  The command line is probably easier.  The NiFi approach is more fun and demonstrates the stream data coming through a flow.
 
 ## Nifi approach for the sensor stream data(optional)
 
 *You can use NiFi to create the sensor stream or connect via ssh and start a generator script via console.*
 
-Download and start this NiFi template file and replace the 3 instances of 52.48.192.20 with you VM IP.  Alternatively you can import the template as is then update the IPs of your processors in the designer as well as the record reader and writer, to reflect your cluster's IP.
+Download and start this NiFi template file and replace the 3 instances of 52.48.192.20 with your VM IP before loading in NiFi.  Alternatively you can import the template as is then update the IPs of your processors in the designer as well as the record reader and writer, to reflect your cluster's IP.
 
 [20220622_083349_Streaming-Demo_NiFi_Flow.xml](assets/20220622_083349_Streaming-Demo_NiFi_Flow.xml)
 
-In NiFi, from the Operate Palette click on the Upload Template icon. Import the Nifi flow.
+In NiFi, from the Operate Palette click on the Upload Template icon. Import the NiFi flow.
 
 Then drag the top bar Template icon to your flow designer and you will be promted to select the template to add to your flow.
 
