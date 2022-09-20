@@ -346,7 +346,7 @@ Execute.  The job will start.  Make sure there are no errors.
 
 ![](assets/20220623_073802_image.png)
 
-Check in Flink that the job is running.
+Open the Flink dashboard and verify that the job is running.
 
 ![](assets/20220623_073826_image.png)
 
