@@ -22,7 +22,7 @@ Below is the demo flow including Nifi to collect the data simulating sensors at 
 
 Obtain a Cloudera download site user and password which comes with a license purchase or for partners a partner development license from Cloudera's partner portal. The partner development license is strickly for partners to develop and show integration of their products and solutions with Cloudera products.
 
-We will be using th Edge2AI Workshop install for this demo [here](https://github.com/cloudera-labs/edge2ai-workshop/) to setup an 'edge2ai' one node CDP cluster. There are two installs people external to Cloudera can use described on that project;
+We will be using the Edge2AI Workshop install for this demo [here](https://github.com/cloudera-labs/edge2ai-workshop/) to setup an 'edge2ai' one node CDP cluster. There are two installs people external to Cloudera can use described on that project;
 
 a fully automated install on AWS infrastructure [here](https://github.com/cloudera-labs/edge2ai-workshop/tree/trunk/setup#running-locally-without-docker) for prereqs and [here](https://github.com/cloudera-labs/edge2ai-workshop/tree/trunk/setup#setup) for install steps.
 
@@ -103,7 +103,7 @@ java -classpath kafka-producer-0.0.1.0.jar producer.KafkaLookupWeatherCondition 
 # Step 2: Create the Kudu Tables
 Open Hue and select the Impala Editor 
 
-http://<public_dns>:8889/
+http://<your_IP>:8889/
 
 or
 
@@ -188,7 +188,7 @@ TBLPROPERTIES ('kudu.num_tablet_replicas' = '1');
 
 # Step 3: Create virtual tables in SQL Stream Builder
 
-http://<public_dns>:18121/
+http://<your_IP>:18121/
 
 Open the SSB Console, create a job and run the following SQL.
 
@@ -309,7 +309,7 @@ Name: `kudu_source`
 
 Catalog Type: `kudu`
 
-Kudu Masters: `edge2ai-0.dim.local:7051`
+Kudu Masters: `<your_IP>:7051`
 
 ![](assets/20220623_073600_image.png)
 
