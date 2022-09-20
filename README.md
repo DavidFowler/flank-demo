@@ -53,7 +53,7 @@ You have two choices below to create a sensor data stream; NiFi or command line.
 
 *You can use NiFi to create the sensor stream or connect via ssh and start a generator script via console.*
 
-Download and start this NiFi template file and replace the 3 instances of 52.48.192.20 with your VM IP before loading in NiFi.  Alternatively you can import the template as is then update the IPs of your processors in the designer as well as the record reader and writer, to reflect your cluster's IP.
+Download this NiFi template file and replace the 3 instances of 52.48.192.20 with your VM IP before loading nd starting in NiFi.  Alternatively you can import the template as is then update the IPs of your processors in the designer as well as the record reader and writer, to reflect your cluster's IP.  It's easier and quicker just to edit the file first.
 
 [20220622_083349_Streaming-Demo_NiFi_Flow.xml](assets/20220622_083349_Streaming-Demo_NiFi_Flow.xml)
 
