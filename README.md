@@ -47,7 +47,7 @@ The following steps can then be used for either of the install paths you followe
 
 # Step 1: Start the data stream
 
-You have two choice below to create a sensor data stream; NiFi or command line.
+You have two choices below to create a sensor data stream; NiFi or command line.
 
 ## Nifi (optional)
 
