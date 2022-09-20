@@ -342,7 +342,7 @@ ON iot.`sensor_id` = geo.`sensor_id`;
 
 ![](assets/20220623_073722_image.png)
 
-Start the job and make sure there are no errors.
+Execute.  The job will start.  Make sure there are no errors.
 
 ![](assets/20220623_073802_image.png)
 
