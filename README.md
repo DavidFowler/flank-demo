@@ -187,8 +187,10 @@ TBLPROPERTIES ('kudu.num_tablet_replicas' = '1');
 ```
 
 # Step 3: Create virtual tables in SQL Stream Builder
+
 http://<public_dns>:18121/
-OOPne the SSB Console, create a job and run the following SQL.
+
+Open the SSB Console, create a job and run the following SQL.
 
 1. Create Weather condition upsert
 
