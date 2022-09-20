@@ -47,13 +47,13 @@ The following steps can then be used for either of the install paths you followe
 
 # Step 1: Start the data stream
 
-You have two choices below to create a sensor data stream; NiFi or command line.
+You have two choices below to create a sensor data stream; NiFi or command line.  The command line is probably easier but eh NiFi approach is more fun and demonstrates the stream data coming through a flow.
 
-## Nifi (optional)
+## Nifi approach for the sensor stream data(optional)
 
 *You can use NiFi to create the sensor stream or connect via ssh and start a generator script via console.*
 
-Download this NiFi template file and replace the 3 instances of 52.48.192.20 with you VM IP.  Alternatively you can import the template as is then update the IPs of your processors in the designer as well as the record reader and writer, to reflect your cluster's IP.
+Download and start this NiFi template file and replace the 3 instances of 52.48.192.20 with you VM IP.  Alternatively you can import the template as is then update the IPs of your processors in the designer as well as the record reader and writer, to reflect your cluster's IP.
 
 [20220622_083349_Streaming-Demo_NiFi_Flow.xml](assets/20220622_083349_Streaming-Demo_NiFi_Flow.xml)
 
@@ -94,12 +94,15 @@ java -classpath kafka-producer-0.0.1.0.jar producer.KafkaIOTSensorSimulator edge
 3. Start Weather data stream (CSV)
 
 ```
-cd /opt/cloudera/parcels/FLINK/lib/flink/examples/streaming
+Open a new shell as above.
+cd /opt/cloudera/parcels/FLINK/lib/flink/examples/streaming &&
 
 java -classpath kafka-producer-0.0.1.0.jar producer.KafkaLookupWeatherCondition edge2ai-0.dim.local:9092
 ```
 
 # Step 2: Create the Kudu Tables
+
+Open Hue and select the Impala Editor (i.e. from CM, Slect the Hue, service, UI, login as admin (first time Hue login set a Hue admin user as prompted), then select the Impala editor.
 
 1. Create *sensors*
 
@@ -144,7 +147,7 @@ STORED AS KUDU
 TBLPROPERTIES ('kudu.num_tablet_replicas' = '1');
 ```
 
-3. Add your custom location data
+3. Add your custom location data using this sql in the Impala Editor.
 
    [austria](assets/20220623_111410_austria.sql)
 
