@@ -354,6 +354,8 @@ Open the Flink dashboard and verify that the job is running.
 
 Go to Data Viz via the webinterface of the web instance and click on ‘data’ to add a new connection.
 
+http://viz.cdsw.<your_IP>.nip.io/
+
 1. Add new Data Connection
 
 Basic:
