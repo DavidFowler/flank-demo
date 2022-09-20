@@ -101,8 +101,10 @@ java -classpath kafka-producer-0.0.1.0.jar producer.KafkaLookupWeatherCondition 
 ```
 
 # Step 2: Create the Kudu Tables
-
-Open Hue and select the Impala Editor (i.e. from CM, Slect the Hue, service, UI, login as admin (first time Hue login set a Hue admin user as prompted), then select the Impala editor.
+Open Hue and select the Impala Editor 
+http://<public_dns>:8889/
+or
+from CM, Select the Hue service, Hue UI, login as admin (first time Hue login sets a Hue admin user as prompted), then select the Impala editor.
 
 1. Create *sensors*
 
@@ -182,6 +184,7 @@ TBLPROPERTIES ('kudu.num_tablet_replicas' = '1');
 ```
 
 # Step 3: Create virtual tables in SQL Stream Builder
+http://<public_dns>:18121/
 
 1. Create Weather condition upsert
 
