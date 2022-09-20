@@ -313,7 +313,7 @@ Kudu Masters: `<your_IP>:7051`
 
 ![](assets/20220623_073600_image.png)
 
-Then click ‘**validate**’ and ‘**Add Table**’ and then go back to the **Console > SQL**.
+Then click ‘**validate**’ and ‘**Add Table**’ (or ‘**Create**’ depending on SSB version) and then go back to the **Console > SQL**.
 
 Make sure to add the EXACT same column names as in step 2.4!
 
