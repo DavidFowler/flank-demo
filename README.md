@@ -378,7 +378,7 @@ Authentication mode: `NoSasl`
 
 ![](assets/20220623_092553_image.png)
 
-We are going to use google maps with our joined senor and location data.  You need to get a Google API Id we will use in this step.  Do a web search on google map API key and follow the isntructions to get a google maps API key.
+We are going to use google maps with our joined senor and location data.  You need to get a Google API Id we will use in this step.  Do a web search on "google maps API key" and follow the isntructions to get a google maps API key.  Alternatively you can create your own visual representation of the joined data as desired.
 
 ![](assets/20220623_093001_image.png)
 
@@ -393,6 +393,8 @@ You can now either create the map yourself or import a ready made dashboard:
 Import the Dashboard by clicking on the ... under **Data** and then click on **Import Visual Artifacts**.
 
 ![](assets/20220627_081450_image.png)
+
+From your list of Dashboards you should now have the option to select the Fleet Control  one you just imported or the one you created with the joined senor and location data.  You can also browse the joined data to see it's there before using the visual dashboard.
 
 Below is an example of what it will look like:
 
