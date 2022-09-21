@@ -378,7 +378,7 @@ Authentication mode: `NoSasl`
 
 ![](assets/20220623_092553_image.png)
 
-We are going to use google maps with our joined senor and location data.  You need to get a Google API Id we will use in this step.  Do a web search on "google maps API key" and follow the isntructions to get a google maps API key.  Alternatively you can create your own visual representation of the joined data as desired.
+We are going to use google maps with our joined senor and location weather data.  You need to get a Google API Id we will use in this step.  Do a web search on "google maps API key" and follow the isntructions to get a google maps API key.  Alternatively you can create your own visual representation of the joined data as desired.
 
 ![](assets/20220623_093001_image.png)
 
