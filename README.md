@@ -348,7 +348,7 @@ Execute.  The job will start.  Make sure there are no errors.
 
 Open the Flink dashboard and verify that the job is running.
 
-![](assets/Flink Dashboard job status.png)
+![](assets/FlinkDashboardjobstatus.png)
 
 # Step 4: Show the results on a map
 
