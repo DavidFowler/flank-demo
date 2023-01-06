@@ -49,7 +49,8 @@ The following steps can then be used for either of the install paths you followe
 
 You have two choices below to create a sensor data stream; NiFi or jar command line.  The command line is probably easier.  The NiFi approach is more fun and demonstrates the stream data coming through a flow.
 
-## Weather data generorator (pick from jar command line approch or NiFi flow approach - command line recommend as default)
+## Weather data generorator 
+(pick from jar command line approch or NiFi flow approach - command line recommend as default)
 
 *You use NiFi to create the sensor stream or connect via ssh and start a generator script via console.*
 
