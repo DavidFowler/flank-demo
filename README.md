@@ -403,7 +403,5 @@ Below is an example of what it will look like:
 ![](assets/20220623_093125_image.png)
 
 Resources
-Original blog by Regina Hackenburg
-
 
 Cloudera Documentation
