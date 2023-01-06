@@ -47,34 +47,13 @@ The following steps can then be used for either of the install paths you followe
 
 # Step 1: Start the data stream
 
-You have two choices below to create a sensor data stream; NiFi or command line.  The command line is probably easier.  The NiFi approach is more fun and demonstrates the stream data coming through a flow.
+You have two choices below to create a sensor data stream; NiFi or jar command line.  The command line is probably easier.  The NiFi approach is more fun and demonstrates the stream data coming through a flow.
 
-## Nifi approach for the sensor stream data(optional)
+## Weather data generorator (pick from jar command line approch or NiFi flow approach - command line recommend as default)
 
-*You can use NiFi to create the sensor stream or connect via ssh and start a generator script via console.*
+*You use NiFi to create the sensor stream or connect via ssh and start a generator script via console.*
 
-Download this NiFi template file and replace the 3 instances of 52.48.192.20 with your VM IP before loading nd starting in NiFi.  Alternatively you can import the template as is then update the IPs of your processors in the designer as well as the record reader and writer, to reflect your cluster's IP.  It's easier and quicker just to edit the file first.
-
-[20220622_083349_Streaming-Demo_NiFi_Flow.xml](assets/20220622_083349_Streaming-Demo_NiFi_Flow.xml)
-
-In NiFi, from the Operate Palette click on the Upload Template icon. Import the NiFi flow.
-
-Then drag the top bar Template icon to your flow designer and you will be promted to select the template to add to your flow.
-
-Your canvas should now look like below:
-
-![](assets/20220622_083109_nifi.png)
-
-Go to the Schema Registry and follow lab 1 from [here](https://github.com/cloudera-labs/edge2ai-workshop/blob/trunk/workshop_nifi.adoc#lab-1---registering-a-schema-in-schema-registry) to add the Schema to the Registry.
-
-You can find the schema text [here](https://raw.githubusercontent.com/cloudera-labs/edge2ai-workshop/master/sensor.avsc).
-
-The result will look as follows:
-
-![](assets/20220627_080213_image.png)
-
-## Weather data
-
+Jar Approach 
 1. Download the jar's
 
 ```
@@ -99,6 +78,29 @@ cd /opt/cloudera/parcels/FLINK/lib/flink/examples/streaming &&
 
 java -classpath kafka-producer-0.0.1.0.jar producer.KafkaLookupWeatherCondition edge2ai-0.dim.local:9092
 ```
+## Nifi approach for the sensor stream data(optional)
+
+*You use NiFi to create the sensor stream or connect via ssh and start a generator script via console.*
+
+Download this NiFi template file and replace the 3 instances of 52.48.192.20 with your VM IP before loading nd starting in NiFi.  Alternatively you can import the template as is then update the IPs of your processors in the designer as well as the record reader and writer, to reflect your cluster's IP.  It's easier and quicker just to edit the file first.
+
+[20220622_083349_Streaming-Demo_NiFi_Flow.xml](assets/20220622_083349_Streaming-Demo_NiFi_Flow.xml)
+
+In NiFi, from the Operate Palette click on the Upload Template icon. Import the NiFi flow.
+
+Then drag the top bar Template icon to your flow designer and you will be promted to select the template to add to your flow.
+
+Your canvas should now look like below:
+
+![](assets/20220622_083109_nifi.png)
+
+Go to the Schema Registry and follow lab 1 from [here](https://github.com/cloudera-labs/edge2ai-workshop/blob/trunk/workshop_nifi.adoc#lab-1---registering-a-schema-in-schema-registry) to add the Schema to the Registry.
+
+You can find the schema text [here](https://raw.githubusercontent.com/cloudera-labs/edge2ai-workshop/master/sensor.avsc).
+
+The result will look as follows:
+
+![](assets/20220627_080213_image.png)
 
 # Step 2: Create the Kudu Tables
 Open Hue and select the Impala Editor 
